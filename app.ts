@@ -7,3 +7,18 @@ function printResult1(num: number): void {
 }
 
 printResult1(add(2, 5));
+
+function addAndHandle(a: number, b: number, cb: (c: number) => void) {
+  const result = a + b;
+  cb(result);
+}
+
+let combineValues: (a: number, b: number) => number;
+combineValues = add;
+//combineValues = printResult1;
+
+console.log(combineValues(50, 4));
+
+addAndHandle(10, 20, (result) => {
+  console.log(result);
+});
