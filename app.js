@@ -1,12 +1,12 @@
-// const person: {
-//   name: string;
-//   age: number;
-// } = {
 var person = {
+    //const person = {
     name: "Test",
     age: 30,
     hobbies: ["sports", "cooking"],
+    role: [2, "author"],
 };
+person.role.push("admin");
+person.role[1] = 10;
 console.log(person.name);
 var favoritesActivities;
 favoritesActivities = ["Sports"];
