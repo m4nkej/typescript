@@ -111,6 +111,7 @@
     "2-configuration-playground",
     "3-arr-obj",
     "4-class-interface",
-    "5-advance-types"
+    "5-advance-types",
+    "6-generics"
   ]
 }
