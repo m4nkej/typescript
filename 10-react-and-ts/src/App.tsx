@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import TodoList from "./components/TodoList";
 import NewTodo from "./components/NewTodo";
 import { TodoItem } from "./model/todo.model";
-
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Container } from "react-bootstrap";
 function App() {
   const [todos, setTodos] = useState<TodoItem[]>([]);
 
@@ -13,11 +14,17 @@ function App() {
     ]);
   };
 
+  const todoDeleteHandler = (id: string) => {
+    setTodos((prevTodos) => {
+      return prevTodos.filter((todo) => todo.id !== id);
+    });
+  };
+
   return (
-    <div className="App">
+    <Container>
       <NewTodo onAddTodo={todoAddHandler} />
-      <TodoList items={todos} />
-    </div>
+      <TodoList items={todos} onDeleteTodo={todoDeleteHandler} />
+    </Container>
   );
 }
 
