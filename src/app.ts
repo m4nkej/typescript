@@ -46,7 +46,7 @@ async function searchAddressHendler(event: Event): Promise<void> {
       const coordinates = res.data.results[0].geometry.location;
 
       map = new Map(document.getElementById("map") as HTMLElement, {
-        zoom: 10,
+        zoom: 13,
         center: coordinates,
         mapId: "DEMO_MAP_ID",
       });
