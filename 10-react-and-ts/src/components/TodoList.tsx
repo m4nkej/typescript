@@ -8,7 +8,7 @@ interface TodoListProps {
 
 function TodoList(props: TodoListProps): JSX.Element {
   return (
-    <ListGroup>
+    <ListGroup className="shadow rounded">
       {props.items.map((todo) => (
         <ListGroup.Item key={todo.id}>
           <span> {todo.text}</span>

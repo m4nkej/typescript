@@ -18,12 +18,15 @@ function NewTodo(props: NewTodoProps): JSX.Element {
   };
 
   return (
-    <Form onSubmit={todoSubmitHandler}>
+    <Form
+      onSubmit={todoSubmitHandler}
+      className="shadow p-3 mb-5 bg-body-tertiary rounded  border"
+    >
       <Form.Group as={Row} controlId="todo-text">
-        <Form.Label column sm="1">
+        <Form.Label column sm="2">
           Todo Text
         </Form.Label>
-        <Col sm="11">
+        <Col sm="10">
           <Form.Control type="text" id="todo-text" ref={textInputRef} />
         </Col>
       </Form.Group>

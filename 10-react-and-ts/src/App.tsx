@@ -21,7 +21,7 @@ function App() {
   };
 
   return (
-    <Container>
+    <Container className="mt-2">
       <NewTodo onAddTodo={todoAddHandler} />
       <TodoList items={todos} onDeleteTodo={todoDeleteHandler} />
     </Container>
